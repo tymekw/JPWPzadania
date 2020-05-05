@@ -154,6 +154,7 @@ while True:
     conn, addr = s.accept()
     threaded_client(conn, my_id)
     my_id += 1
+    connections += 1
     # W tej pętli serwer stale wyczekuje nowych połączeń
     # Serwer powinien akceptować takie połączenia (socket przypisany jest do zmiennej 's')
     # Następnie wywołać funkcje threded_client z gniazdem i unikalnym id klienta
